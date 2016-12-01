@@ -1,56 +1,271 @@
-/*HTML tags/others*/
+/*Basic HTML tags and others*/
+/*********************************************/
+
 body {
     margin: 0;
-    /*background-image: image()*/
+    /*background: url(Pictures/banner-photo.jpg);*/
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, html {
+    margin: 0;
+    padding: 0;
+}
+
+h1 { /*used for title*/
+    position: block;
+    text-align: center;
+    width: 100%;
+    background-color: lightgray;
+    font-size: 60px;
+}
+
+h2 { /*used for headings of intro, projects and experience*/
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+p span {
+    font: bold 16px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb (0,0,0);
+    /*padding: 0px 300px 0px 300px;*/
+    padding: 0 5% 0 5%;
+    display: block;
+    height: 100%;
 }
 
 html {
     position: relative;
     width: 100%;
     min-height: 100%;
-	margin: 0;
-	padding: 0;
 }
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: auto/9; /* edge case for ie8*/
+}
+
+/*Banner css*/
+/*********************************************/
+.banner-container{
+    height: 100vh;
+}
+
+.banner-photo {
+    padding-top: 40px;
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-box {
+    display: block;
+    top: 160px;
+    text-align: center;
+    position: block;
+    padding: 0% 30%;
+}
+
+
 
 /*Navagation bar css*/
-.navbar {
+/*********************************************/
+
+#navbar {
     width: 100%;
     height: 40px;
-    font-family: sans-serif;
+    font-family: inherit;
+    position: block;
 }
 
-.navbar ul {
+#navbar > ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 11px 0px;
     overflow: hidden;
     position: fixed;
     width: 100%;
     background-color: lightgrey;
-
+    z-index: 2; /* used to be infront of display: abosulte*/
 }
 
-.navbar li {
+#navbar > ul > li {
+    display: inline;
     float:left;
 }
 
-.navbar li a {
-    display: block;
+#navbar > ul > li > a {
     color: black;
     text-align: center;
     padding: 11px 20px;
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: lightblue;
+#navbar > ul> li > a:hover {
+    background-color: yellow;
+    opacity: .5;
 }
 
-/*Footer css*/
-.footer {
+
+/*Introduction css*/
+/*********************************************/
+.introduction-container {
+    background: #439D80;
+}
+
+/*Projects css*/
+/*********************************************/
+.project-container {
+    background-color: lightgrey;
+}
+
+.project-heading {
+    text-align: center;
+    position: relative;
+    color: pink;
+    text-shadow: 8px 6px #301c41;
+    padding: 5px;
+}
+
+.image-container{
+    list-style-type: none;
+    margin 0;
+    padding 0;
+    
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    width: auto/9; /* edge case for ie8*/
+    position: relative;
+}
+
+.text-content span {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.image-container .image:hover .text-content {
+    opacity: 1;
+}
+
+.text-content {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    cursor: pointer;
     position: absolute;
-    bottom: 0;
+    height: 100%;
     width: 100%;
-    height: 54px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    display: flex;
+    justify-content: center;    
+}
+
+
+.project-1, .project-2 {
+
+}
+
+.project-description {
+    
+}
+
+/*Experience css*/
+/*********************************************/
+.experience-container {
+    opacity: .8;
+    background: #648880;
+    background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
+    /*margin-top: 50px;*/
+
+}
+
+.experience-heading {
+    text-align: center;
+    position: relative;
+    color: pink;
+    text-shadow: 8px 6px #301c41;
+    padding: 5px;
+}
+
+.experience-1-container {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.experience-img {
+    -moz-order: 1;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    position: relative;   
+    float: left;
+    width: 600px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+}
+
+.experience-1-description {
+    float: left;
+    width: 80%;
+    position: relative;
+    text-align: center;
+}
+
+.experience-2-container {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 5%;    
+}
+
+
+/*Footer css*/
+/*********************************************/
+#main {
+    z-index: -1;
+    position: relative;
+    margin: 0 0 300px 0;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /*position: fixed;*/
+    z-index: -4;
     background: red;
 }
