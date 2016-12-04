@@ -3,8 +3,10 @@
 
 body {
     margin: 0;
-    /*background: url(Pictures/banner-photo.jpg);*/
+    background: url(Pictures/banner-photo.jpg);*/
     background-size: cover;
+    padding-top: 40px;
+    margin-top: -40px;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, html {
@@ -17,11 +19,11 @@ h1 { /*used for title*/
     text-align: center;
     width: 100%;
     background-color: lightgray;
-    font-size: 60px;
+    font-size: 58px;
 }
 
 h2 { /*used for headings of intro, projects and experience*/
-    font-size: 50px;
+    font-size: 52px;
 }
 
 p {
@@ -60,20 +62,23 @@ img {
     height: 100vh;
 }
 
-.banner-photo {
-    padding-top: 40px;
-    max-width: 100%;
-    height: auto;
+.banner-inner {
+    padding: 0% 0%;
 }
 
 .banner-box {
     display: block;
-    top: 160px;
     text-align: center;
     position: block;
-    padding: 0% 30%;
+    padding: 10% 30%;
+    opacity: .6;
+    max-width: 100%;
+    height: auto;
 }
 
+.banner-box > h2 {
+    font-size: 36px;
+}
 
 
 /*Navagation bar css*/
@@ -86,7 +91,7 @@ img {
     position: block;
 }
 
-#navbar > ul {
+#navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 11px 0px;
@@ -94,24 +99,23 @@ img {
     position: fixed;
     width: 100%;
     background-color: lightgrey;
-    z-index: 2; /* used to be infront of display: abosulte*/
+    z-index: 5; /* used to be infront of display: abosulte*/
 }
 
-#navbar > ul > li {
+#navbar li {
     display: inline;
     float:left;
 }
 
-#navbar > ul > li > a {
+#navbar a {
     color: black;
     text-align: center;
-    padding: 11px 20px;
+    padding: 11px 25px;
     text-decoration: none;
 }
 
-#navbar > ul> li > a:hover {
+#navbar a:hover {
     background-color: yellow;
-    opacity: .5;
 }
 
 
@@ -125,6 +129,8 @@ img {
 /*********************************************/
 .project-container {
     background-color: lightgrey;
+    padding-top: 40px;
+
 }
 
 .project-heading {
@@ -132,7 +138,7 @@ img {
     position: relative;
     color: pink;
     text-shadow: 8px 6px #301c41;
-    padding: 5px;
+    padding-bottom: 30px;
 }
 
 .image-container{
@@ -151,16 +157,16 @@ img {
     position: relative;
 }
 
-.text-content span {
+.overlay span {
     text-align: center;
     vertical-align: middle;
 }
 
-.image-container .image:hover .text-content {
+.image-container .image:hover .overlay {
     opacity: 1;
 }
 
-.text-content {
+.overlay {
     background: rgba(0,0,0,0.6);
     color: white;
     cursor: pointer;
@@ -176,6 +182,102 @@ img {
     justify-content: center;    
 }
 
+/*modal css*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    /*-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;*/
+    animation: animatetop .8s 1;*/
+}
+
+.modal.fade {
+    opacity: 0 ease;
+    display: none;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animatetop {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes animatebottom {
+    from {top:0; opacity:1}
+    to {top:-300px; opacity:0} 
+}
+
+@keyframes animatebottom {
+    from {top:0; opacity:1}
+    to {top:-300px; opacity:0} 
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
 
 .project-1, .project-2 {
 
@@ -192,6 +294,8 @@ img {
     background: #648880;
     background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
     /*margin-top: 50px;*/
+    padding-top: 40px;
+
 
 }
 
@@ -255,9 +359,9 @@ img {
 /*Footer css*/
 /*********************************************/
 #main {
-    z-index: -1;
     position: relative;
     margin: 0 0 300px 0;
+    z-index: 1;
 }
 
 .footer {

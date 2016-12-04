@@ -3,13 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Bryant's Portfolio</title>
-		<link rel="stylesheet" href="style.css" type="text/css">
-		<style type="text/css">
-		</style>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="/css/animate.css" type="text/css">
 	</head>
 	<body>
         
-        <script src="main.js"></script>
+
         
         <div id = "main">
         
@@ -17,7 +16,7 @@
         <div id="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#project">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>       
@@ -26,13 +25,11 @@
         
         <!--Banner section-->
         <div class="banner-container">    
-            <div class = "banner-photo" >
-                <div class = "banner-inner">
-                    <div class = "banner-box">
-                        <h1>Bryant Tran</h1>
-                        <hr/>
-                        <p>Software Developer</p>
-                    </div>
+            <div class = "banner-inner">
+                <div class = "banner-box" >
+                    <h1>Bryant Tran</h1>
+                    <hr/>
+                    <h2>Software Developer</h2>
                 </div>
             </div>
            <!--use JS to change style of bottom of image/opacity-->
@@ -41,7 +38,7 @@
         
         <!--Introduction section-->
         <div class = "introduction-container">
-            <h2 class="experience-heading">About Me</h2>
+            <h2 class="experience-heading">Bio</h2>
             <h3>As an individual who strives to improve everyday
                  by expanding his knowledge, I receive joy from seeing 
                  myself grow, while being challenged to improve  
@@ -50,24 +47,67 @@
         </div>
         
         <!--Projects section-->
-        <div class = "project-container">
+        <div class = "project-container" id="project">
             <h2 class = "project-heading">Projects</h2>
             <div class = "project-1">
                 <div class = "image-container">
                     <div class= "image">
-                        <span class="text-content"><span>tdlfsdlfextee</span></span>
+                        
+                        <span class="overlay">
+                            <span>tdlfsdlfextee</span></span>
                         <img src="Pictures/SlugSearch/snip1.png">
+                        <div class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="close">×</span>
+                                        <h2>Modal 1 Header</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Some text in the Modal Body</p>
+                                    <p>Some other text...</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <h3>Modal Footer</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
+
+                
                 <div class = "project-description">
                     <h2>Tortor dolore feugiat<br />
                         elementum magna</h2>
                 </div>
             </div>
             <div class = "project-2">
-                <div class="image">
-                    <img src="Pictures/web2py/web2py-cover.png">
+                <div class="image-container">
+                    <div class="image">
+                        <span class="overlay">
+                            <span>tdlfsdlfextee</span>
+                        </span>
+                        <img class="img-modal" src="Pictures/web2py/web2py-cover.png">
+                            <div class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">×</span>
+                                            <h2>Modal 2 Header</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Some text in the Modal Body</p>
+                                        <p>Some other text...</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h3>Modal Footer</h3>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>                
                 </div>
+
                 <div class = "content">
                     <h2>Tortor dolore feugiat<br />
                     elementum magna</h2>
@@ -76,14 +116,14 @@
         </div>
         
         <!--Experience section-->
-        <div class = "experience-container">
+        <div class = "experience-container" id="experience">
             <h2 class = "experience-heading">Experience</h2>
             <div class = "experience-1-container">
                 <div class = "experience-1-img">
                     <img class = "experience-img" src="Pictures/7L.jpg">
                 </div>
                 <div class = "experience-1-description">
-                    <h3>7layers</h3>
+                    <h3>7layers | Test Session Operator</h3>
                     <p>as;ldfjkx</p>
                 </div>
                 
@@ -94,7 +134,7 @@
                     <img class="experience-img" src="ucsc.jpg">
                 </div>
                 <div class = "experience-1-description">
-                    <h3>7layers</h3>
+                    <h3>University of California, Santa Cruz</h3>
                     <p>as;ldfjkx</p>
                 </div>
             </div>
@@ -109,5 +149,10 @@
             footer
         </div>
                 
+        <!--JS tags and more-->
+        <script type="text/javascript" src="main.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="yourPath/animatedModal.min.js"></script>
+        
    </body>
 </html>
