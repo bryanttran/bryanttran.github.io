@@ -7,6 +7,7 @@ body {
     background-size: cover;
     padding-top: 40px;
     margin-top: -40px;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, html {
@@ -20,6 +21,7 @@ h1 { /*used for title*/
     width: 100%;
     background-color: lightgray;
     font-size: 64px;
+    font-weight: normal;
 }
 
 h2 { /*used for headings of intro, projects and experience*/
@@ -40,7 +42,7 @@ p span {
     padding: 0 5% 0 5%;
     display: block;
     height: 100%;
-}
+} /**/
 
 html {
     position: relative;
@@ -81,7 +83,6 @@ img {
     text-align: center;
     position: block;
     padding: 10% 20%;
-    opacity: .6;
     max-width: 100%;
     height: auto;
 }
@@ -97,7 +98,6 @@ img {
 #navbar {
     width: 100%;
     height: 40px;
-    font-family: inherit;
     position: block;
 }
 
@@ -108,7 +108,7 @@ img {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    background-color: lightgrey;
+    background-color: white;
     z-index: 5; /* used to be infront of display: abosulte*/
 }
 
@@ -122,6 +122,7 @@ img {
     text-align: center;
     padding: 11px 25px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #navbar a:hover {
@@ -132,17 +133,24 @@ img {
 /*Introduction css*/
 /*********************************************/
 .introduction-container {
-    background: #439D80;
+    background: #C26868;
+    opacity: .9;
 }
 
 .introduction-container > .heading {
     padding-top: 20px;
 }
 
+.about {
+    padding: 5% 0%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 /*Projects css*/
 /*********************************************/
 .project-container {
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     padding-top: 40px;
     //margin-top: 70px;
 }
@@ -165,10 +173,7 @@ img {
     position: relative;
 }
 
-.overlay span {
-    text-align: center;
-    vertical-align: middle;
-}
+
 
 .image-container .image:hover .overlay {
     opacity: 1;
@@ -186,9 +191,14 @@ img {
     -moz-transition: opacity 500ms;
     -o-transition: opacity 500ms;
     transition: opacity 500ms;
-    display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    text-align: center;
 }
+
+.overlay > h3 {
+    padding: 5%;
+}
+
 
 /*modal css*/
 .modal {
@@ -286,8 +296,8 @@ img {
 /*Experience css*/
 /*********************************************/
 .experience-container {
-    background: #648880;
-    background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
+    background: #e9e9e9;
+    /*background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
     /*margin-top: 50px;*/
     padding-top: 40px;
 }
