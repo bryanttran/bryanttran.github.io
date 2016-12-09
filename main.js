@@ -7,9 +7,10 @@ var overlay = document.getElementsByClassName('overlay');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName('close');
 
-// When the user clicks the button, open the modal 
+// When the user clicks the image, open the modal 
 overlay[0].onclick = function() {
-    modal[0].style.display = "block";
+    modal[0].style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -20,12 +21,11 @@ span[0].onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal[0] ) {
-        //modal[0].style.animation = 'animatebottom 1s 1'; 
-        //modal[0].style.display = "none";
-        //modal[0].className = modal[0].className ? '' : 'fade';
         modal[0].style.display = "none";
+        document.body.style.overflow = "visible";
     } else if (event.target == modal[1]) {
         modal[1].style.display = "none";
+        document.body.style.overflow = "visible";
     }
 }
 
@@ -58,7 +58,7 @@ function animationClick(element, animation){
 }
 
 $(document).ready(function(){
-    $('#    overlay').each(function() {
+    $('#overlay').each(function() {
         animationClick(this, 'bounce');
     });
 });
@@ -73,4 +73,10 @@ $(document).ready(function(){
     $('#banner-box').each(function() {
         animationHover(this, 'bounce');
     });
+});
+
+$("#myModal").on("show", function () {
+    $("body").css('overflow', 'hidden');
+}).on("hidden", function (){
+    $("body").css('overflow', 'auto')
 });
