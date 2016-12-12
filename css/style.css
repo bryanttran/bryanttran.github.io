@@ -28,6 +28,10 @@ h2 { /*used for headings of intro, projects and experience*/
     font-size: 3em;
 }
 
+h3 { /*used for small headings and descriptions*/
+    font-size: 1.7em;
+}
+
 p {
     text-align: center;
     display: block;
@@ -197,7 +201,6 @@ img {
 
 .overlay > h3 {
     padding: 5%;
-    font-size: 1.7em;
 }
 
 .overlay > h4 {
@@ -249,7 +252,7 @@ body.modal-open {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: blue;
     color: white;
     text-align: center;
 }
@@ -257,17 +260,62 @@ body.modal-open {
 .modal-body {
     padding: 2px 16px;
     text-align: center;
+    padding-bottom: 2em;
+}
+
+.mobile-image > img {
+    height: 430px;
+    width: 320px;
+    display: inline-block;
+    margin-bottom: .5em;
+    border: 1px solid black;
 }
 
 .modal-body > img {
-    height: 400px;
-    width: 320px;
-    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: .5em;
+}
+
+.modal-body-left {
+    float: left;
+    width: 35%;
+}
+
+.modal-body-left > p { /*to bold left text*/ 
+    font-weight: 700;
+}
+
+.modal-body-left > p, .modal-body-right > p { /*for description in modals*/
+    text-align: left;
+    padding: .6em 0;
+    color: darkcyan;
+    line-height: 150%;
+}
+
+.modal-body-left > h3, .modal-body-right > h3 { /*for titles in modals*/
+    text-align: left;
+    font-weight: 500;
+}
+
+.modal-body-right > h4 { /*for subtitles in modal*/
+    text-align: left;
+}
+
+.modal-description {
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+.modal-body-right {
+    float: right;
+    width: 65%;
+    right: 0;
 }
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: blue;
     color: white;
 }
 
