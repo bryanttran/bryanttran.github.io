@@ -16,6 +16,8 @@ overlay[0].onclick = function() {
 // When the user clicks on <span> (x), close the modal
 span[0].onclick = function() {
     modal[0].style.display = "none";
+    document.body.style.overflow = "visible";
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -29,18 +31,17 @@ window.onclick = function(event) {
     }
 }
 
-// Get the image that opens the modal
-//var img2 = document.getElementById('img-2-modal');
-
-
 // When the user clicks the button, open the modal 
 overlay[1].onclick = function() {
     modal[1].style.display = "block";
+    document.body.style.overflow = "hidden";
+
 }
 
 // When the user clicks on <span> (x), close the modal
 span[1].onclick = function() {
     modal[1].style.display = "none";
+    document.body.style.overflow = "visible";
 }
 
 
@@ -53,7 +54,6 @@ function animationClick(element, animation){
             window.setTimeout( function(){
                 element.removeClass('animated ' + animation);
             }, 2000);         
-  
         });
 }
 

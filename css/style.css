@@ -3,11 +3,13 @@
 
 body {
     margin: 0;
-    background: url(Pictures/banner-photo.jpg);*/
-    background-size: cover;
+    background-size: 100%;
     padding-top: 40px;
     margin-top: -40px;
     font-family: 'Raleway', sans-serif;
+    background: no-repeat fixed url(/Pictures/background.jpeg);
+    background-size: cover;
+    background-position: 75% 40%;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, html {
@@ -62,14 +64,16 @@ img {
     width: auto/9; /* edge case for ie8*/
 }
 
+
+
 /*Common classes*/
 /*********************************************/
-.heading {
+.heading { /*for headings of content*/
     text-align: center;
     position: relative;
-    color: pink;
-    text-shadow: 8px 6px #301c41;
-    padding-bottom: 30px;
+    color: gold;
+    text-shadow: 5px 5px #301c41;
+    margin-bottom: 30px;
 }
 
 /*Banner css*/
@@ -79,20 +83,28 @@ img {
 }
 
 .banner-inner {
-    padding: 0% 0%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    opacity: .9;
+    top: 50%;
+    left: 50%;
+    padding-top: 300px;
 }
 
 .banner-box {
     display: block;
     text-align: center;
     position: block;
-    padding: 10% 20%;
     max-width: 100%;
     height: auto;
+    background-color: lightgrey;
+    width: 50%;
+    height: 50%;
 }
 
 .banner-box > h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 
@@ -146,7 +158,7 @@ img {
 }
 
 .about {
-    padding: 3% 0%;
+    padding-bottom: 3%;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -155,17 +167,13 @@ img {
 /*********************************************/
 .project-container {
     background-color: #d3d3d3;
-    padding-top: 40px;
-    //margin-top: 70px;
+    padding-top: 20px;
 }
-
-
 
 .image-container{
     list-style-type: none;
     margin 0;
-    padding 0;
-    
+    padding 0;    
 }
 
 .image {
@@ -175,6 +183,10 @@ img {
     height: auto;
     width: auto/9; /* edge case for ie8*/
     position: relative;
+}
+
+.image > img {
+    width: 100%;
 }
 
 
@@ -209,6 +221,21 @@ img {
     bottom: 0;
 }
 
+.project-description {
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.project-description > a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-1, .project-2 {
+
+}
+
 
 /*modal css*/
 
@@ -220,7 +247,6 @@ body.modal-open {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 8; /* Sit on top */
-    //padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -231,7 +257,6 @@ body.modal-open {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -244,14 +269,13 @@ body.modal-open {
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.6s;*/
-    animation: animatetop .8s 1;*/  
-    top: 50%;
-    left 50%;
-    
+    animation: animatetop .8s 1;
+    bottom: 50px;
+    margin-top: 100px;
 }
 
 .modal-header {
-    padding: 2px 16px;
+    padding: 16px;
     background-color: blue;
     color: white;
     text-align: center;
@@ -268,7 +292,7 @@ body.modal-open {
     width: 320px;
     display: inline-block;
     margin-bottom: .5em;
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 .modal-body > img {
@@ -314,9 +338,16 @@ body.modal-open {
 }
 
 .modal-footer {
-    padding: 2px 16px;
+    padding: 16px;
     background-color: blue;
     color: white;
+    text-align: center;
+}
+
+.modal-footer > a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
 }
 
 /* Add Animation */
@@ -349,24 +380,17 @@ body.modal-open {
     float: right;
     font-size: 2.5em;
     font-weight: bold;
+    padding: 0 .4em
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: white;
+    background-color: red;
     text-decoration: none;
     cursor: pointer;
 }
 
-
-
-.project-1, .project-2 {
-
-}
-
-.project-description {
-    
-}
 
 /*Experience css*/
 /*********************************************/
@@ -374,22 +398,14 @@ body.modal-open {
     background: #e9e9e9;
     /*background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
     /*margin-top: 50px;*/
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
-.experience-heading {
-    text-align: center;
-    position: relative;
-    color: pink;
-    text-shadow: 8px 6px #301c41;
-    padding: 5px;
-}
-
-.experience-1-container {
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
+.experience-1-container, .experience-2-container {
+    -moz-align-items: top;
+    -webkit-align-items: top;
+    -ms-align-items: top;
+    align-items: top;
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -412,27 +428,56 @@ body.modal-open {
     box-shadow: 0 0 30px black;
 }
 
-.experience-1-description {
-    float: left;
-    width: 80%;
+.experience-1-description, .experience-2-description {
+    float: top;
+    width: 90%;
     position: relative;
-    text-align: center;
+    text-align: left;
+    margin-left: 5%;
+    vertical-align: top;
 }
 
-.experience-2-container {
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    padding: 40px 5%;    
+.valign {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;   
 }
 
+.title-location {
+    max-height: 6em;
+}
+
+.experience-title {
+    display: inline-block;
+    font-size: 2em;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.experience-location{
+    font-size: 1.3em;
+    vertical-align: middle;
+    height: 150px;
+}
+
+.experience-position {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.experience-date {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.experience-description {
+}
+
+.experience-description > p {
+    text-align: left;
+    padding: .7em 0;
+}
 
 /*Footer css*/
 /*********************************************/
@@ -447,7 +492,7 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 300px;
-    /*position: fixed;*/
     z-index: -4;
-    background: red;
+    background: grey;
+    opacity: .9
 }
