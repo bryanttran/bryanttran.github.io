@@ -8,11 +8,11 @@
         <link href='css/raleway.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-        
+        <span id="top"></span>
         <!--Nav bar -->
         <div id="navbar">
             <ul>
-                <li><a href="#"><span>Home</span></a></li>
+                <li><a href="#top"><span>Home</span></a></li>
                 <li><a href="#project"><span>Projects</span></a></li>
                 <li><a href="#experience"><span>Experience</span></a></li>
                 <li><a href="#contact"><span>Contact</span></a></li>
@@ -20,7 +20,7 @@
         </div> 
         
         <!--Banner section-->
-        <div class="banner-container">    
+        <div class="banner-container" >    
             <div class = "banner-inner">
                 <div class = "banner-box" >
                     <h1>Bryant Tran</h1>
@@ -49,12 +49,35 @@
             <div class = "project-1">
                 <div class = "image-container">
                     <div class= "image">
+                        <span class="overlay">
+                            <h2>~ Website Porfolio ~</h2>
+                            <h3>
+                                Website porfolio used to showcase my projects as well as my diverse 
+                                technical skillset. Designed and built front-end views from scratch
+                                alongside clever HTML5 and CSS design techniques. Added media queries
+                                to create a responsive layout to support all types of browsers.
+                            </h3>
+                        </span>
+                        <img src="Pictures/Portfolio.png">
+                        
+                    </div>
+                </div>
 
+                
+                <div class = "project-description">
+                    <a href="https://github.com/bryanttran/bryanttran.github.io">
+                        Github Source code
+                    </a>
+                </div>
+            </div>
+            <div class = "project-2">
+                <div class = "image-container">
+                    <div class= "image">
                         <span class="overlay">
                             <h2>~ SlugSearch ~</h2>
                             <h3>
                                 A mobile application developed for students at UCSC 
-                                to search for classes in a more efficient manor.
+                                to search for classes in a more efficient manner.
                                 <h4>Click for more details.</h4>
                                 
                             </h3>
@@ -73,10 +96,9 @@
                                         <div class="modal-body-left">
                                             <h3>What I Did</h3> 
                                             <p>
-                                                As a lead UI/UX developer, we created a simple
-                                                yet familiar user interface while also helping
-                                                in parsing data to put into our application 
-                                                fluidly.
+                                                As a lead UI/UX developer, I helped create a simple
+                                                and intuitive user interface, while helping
+                                                parse data to put into the application.
                                             </p>
                                             
                                             <h3>What we Utilized</h3> 
@@ -86,67 +108,69 @@
                                                 AngularJS <br />
                                                 Ionic Framework <br />
                                                 Scrum Methodology
-                                                
                                             </p>
                                         </div>
                                         <div class="modal-body-right">
                                             <br /><h3>Parsed UCSC's class search page for
                                             information onto a mobile application.</h3>
                                             
-                                            <p>SlugSearch is a mobile application to let you 
+                                            <p>SlugSearch is a mobile application that lets you 
                                                 search through UC Santa Cruz's past and current
-                                                classes. The application was used as a intro to 
-                                                software engineering project. Our aim was to
+                                                classes. The aim was to
                                                 have an application on mobile to search for
-                                                classes since UC Santa Cruz's website was not 
-                                                mobile friendly and had many bugs compared to
-                                                their desktop application.
+                                                classes efficiently, since UC Santa Cruz's website is not 
+                                                mobile friendly, and has many bugs compared to
+                                                its desktop application. 
+                                                
+                                                Our application also includes ratings scraped from the 
+                                                website RateMyProfessor which includes an average 
+                                                ratings from the reviews and average grade on the 
+                                                professor. 
+                                                
+                                                explain a little more, rate my professor
                                             </p>
                                             
                                             <h3>Development steps</h3>
                                             <br />
 
                                             <h4>1. Research</h4>
-                                            <p> Our main goal of this project was to allow 
-                                                all students attending UC Santa Cruz to browse 
-                                                classes efficiently on their mobile device. One of
-                                                our main issues in the research stage was to learn
+                                            <p> One of
+                                                the main issues in the research stage was to learn
                                                 a whole new framework and language. We decided to
-                                                use the Ionic Framework since it is capable of 
+                                                use the Ionic Framework, since it is capable of 
                                                 building on both iOS and Android. By using AngularJS' 
                                                 GET and POST requests, we were able to
                                                 effectively scrape the UC Santa Cruz's class 
                                                 search page. 
                                             </p>    
-                                            <p> We had scrum meetings 3 times a week while
-                                                one of those times was with the teacher assistant
-                                                who guided us with our development and scrum 
-                                                terminology. Using a burn up chart, story plots
-                                                3 sprints, and a backlog, we succesfully 
-                                                developed an application which fulfilled our 
+                                            <p> We had scrum meetings three times a week. We received 
+                                                guidance from the teacher assistant
+                                                who advised us with our development and scrum 
+                                                terminology. Using a burn up chart, story plots,
+                                                three sprints, and a backlog, we succesfully 
+                                                developed an application that fulfilled our 
                                                 main functions within a span of 8 weeks. 
                                             </p>
                                             
                                             <h4>2. Development</h4>
-                                            <p> Our first sprint consisted of scraping the 
-                                                big data from the UC Santa Cruz search page, a 
-                                                basic UI design, and being able to parse the 
+                                            <p> The first sprint consisted of scraping  
+                                                big data from the UC Santa Cruz search page, creating a 
+                                                basic UI design, and parsing the 
                                                 data into our application. Since we were still 
                                                 getting used to the Ionic Framework, we used a 
                                                 template to get us started for our user interface. 
                                             </p>
-                                            <p>In our second sprint, we decided to start fresh in
-                                                regards to front end development. We applied more 
-                                                simplistic CSS to the application rather than use a 
-                                                template making the application more attractive. 
-                                                The team also had succesfully scraped 
-                                                RateMyProfessor in order to have that content 
-                                                available in our application. We also were able to 
-                                                scrape the description for each class such that the 
-                                                user can have more details.
+                                            <p>In the second sprint, we decided to start fresh in
+                                                regards to front end development. We applied a more 
+                                                simplistic CSS to the application instead of using a 
+                                                template in order to make the application more aesthetically pleasing. 
+                                                The team also succesfully scraped 
+                                                RateMyProfessor, so that the content would be available in the application. Additionally, we were able to 
+                                                scrape the description for each class, so that the 
+                                                user can be presented with more information.
                                             </p>
                                             <p> The last sprint mainly consisted of quality 
-                                                assurance while touching up our UI/UX design.
+                                                assurance, and touching up our UI/UX design.
                                                 We planned reusable tests to confirm the 
                                                 functionality of the application was stable. 
                                                 We were able to deploy the application on 
@@ -154,15 +178,16 @@
                                                 in order to have a cart to store desired classes.
                                             </p>
                                             <h4>3. Launch</h4>
-                                            <p>With this being a class project, at the end of the
-                                                quarter we gave a presentation of our project, what
+                                            <p>At the end of the
+                                                quarter, we presented our project, what
                                                 we did during our three sprints, and a live quality 
                                                 assurance test to confirm the stability of the
-                                                application. Some parts of our more luxurious story 
-                                                plots did not finish due to time constraints. Some 
+                                                application to the class. Some 
                                                 of these story plots consisted of push
                                                 notifications and a live schedule to see time slots 
                                                 of the week.
+                                                
+                                                edit this more
                                             </p>
                                         </div>
                                     </div>
@@ -193,19 +218,20 @@
                     </a>
                 </div>
             </div>
-            <div class = "project-2">
+            
+            <div class = "project-3">
                 <div class="image-container">
                     <div class="image">
                         <span class="overlay">
                             <h2>~ UCSC Slugbook Exchange ~</h2>
                             <h3>
-                                A web application used to sell and buy books to
+                                A web application used to buy and sell books to
                                 other UC Santa Cruz students. 
                             </h3>
                                 <h4>Click for more details.</h4>
                         </span>
                         <img src="Pictures/web2py/web2py-cover.png">
-                            <div class="modal">
+                            <div class="modal" id=myModal2>
                                 <!-- Modal content -->
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -385,7 +411,7 @@
             </div>
         </div>
                 
-        <!--Footer section-->
+        <!--Contact section-->
         <div class="contact-container" id="contact">
             <h2 class="heading">Lets get in touch</h2>
             <div class="contact-image">
@@ -398,14 +424,17 @@
                 <a href="https://www.github.com/bryanttran">
                     <img src="Pictures/contact/github-icon.png">
                 </a>
-            </div>
-                
+            </div> 
         </div>
-                
-        <!--JS tags and more-->
-        <script type="text/javascript" src="main.js"></script>
-          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="yourPath/animatedModal.min.js"></script>
+        <div class = "footer">
+            <p>Copyright © Bryant Tran 2016</p>
+        </div>
         
-   </body>
+        
+        <!--JS tags and more-->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/jquery-smooth-scroll.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>
