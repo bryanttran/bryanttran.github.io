@@ -67,8 +67,8 @@ img {
 .heading { /*for headings of content*/
     text-align: center;
     position: relative;
-    color: gold;
-    text-shadow: 5px 5px #301c41;
+    color: #C26868;
+    //text-shadow: 5px 5px #301c41;
     padding: 45px 0;
 }
 
@@ -155,6 +155,9 @@ img {
     opacity: .9;
 }
 
+.introduction-container >.heading {
+    color: #e9e9e9;
+}
 
 .introduction-container > .heading {
     padding: 40px 0;
@@ -171,7 +174,7 @@ img {
 /*Projects css*/
 /*********************************************/
 .project-container {
-    background-color: #d3d3d3;    
+    background-color: #e9e9e9;    
 }
 
 .image-container{
@@ -229,23 +232,23 @@ img {
 }
 
 .project-description {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     padding-top: 10px;
 }
 
 .project-description a {
     text-decoration: none;
-    color: white;
+    color: #e28585;
     transition: all .5s ease;
-    background: linear-gradient(to right, white 50%, black 50%);
+    background: linear-gradient(to right, #e9e9e9 50%, #d1d1d1 50%);
     background-position: right top;
     background-size: 201% 100%;
     padding: 2px;
 }
 
 .project-description a:hover {
-    color: black;
+    color: #C26868;
     background-position: left bottom;
 }
 
@@ -292,9 +295,9 @@ img {
 
 .modal-header {
     padding: 16px;
-    background-color: blue;
-    color: white;
+    background-color: #C26868;
     text-align: center;
+    color: #e1e1e1;
 }
 
 .modal-body {
@@ -329,7 +332,7 @@ img {
 .modal-body-left > p, .modal-body-right > p { /*for description in modals*/
     text-align: left;
     padding: .6em 0;
-    color: darkcyan;
+    color: #545454;
     line-height: 150%;
 }
 
@@ -356,21 +359,20 @@ img {
 
 .modal-footer {
     padding: 16px;
-    background-color: blue;
-    color: white;
+    background-color: #C26868;
     text-align: center;
 }
 
 .modal-footer > a {
-    color: white;
     text-decoration: none;
+    color: #000;
     font-size: 2em;
     transition: all 1s ease; 
 }
 
 .modal-footer > a:hover {
-    color: black;
-    background: red;
+    color: #FFF;
+    background: #B86262;
 }
 
 /* Add Animation */
@@ -403,7 +405,7 @@ img {
     font-weight: bold;
     border-radius: 50%;
     text-align: center;
-    background: lightblue;
+    background: #C26868;
     height: 42px;
     width: 42px;
     transition: all .5s ease;
@@ -420,7 +422,7 @@ img {
 /*Experience css*/
 /*********************************************/
 .experience-container {
-    background: #e9e9e9;
+    background: #e1e1e1;
     /*background: linear-gradient(to left, #f6f1d3, #648880 85%, #293f50);
     /*margin-top: 50px;*/
 }
@@ -514,6 +516,9 @@ img {
     padding-bottom: 40px;
 }
 
+.contact-container > .heading {
+    color: #FFF;
+}
 .contact-image {
     text-align: center;
 }
@@ -531,12 +536,4 @@ img {
 .contact-image img:hover {
     filter: brightness(0) invert(1);
     transform: rotate(360deg);
-}
-
-/*Footer css*/
-/*********************************************/
-.footer {
-    background-color: black;
-    color: white;
-    font-size: 1.7em;
 }
