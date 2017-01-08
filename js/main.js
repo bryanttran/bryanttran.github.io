@@ -77,6 +77,7 @@ $("#myModal").on("show", function () {
     $("body").css('overflow', 'auto')
 });
 
+/*used for opacity on scroll for banner box*/
 var bannerbox = $('.banner-box');
 var range = 410;
 

@@ -30,7 +30,7 @@ h2 { /*used for headings of intro, projects and experience*/
 }
 
 h3 { /*used for small headings and descriptions*/
-    font-size: 1.7em;
+    font-size: 1.8em;
 }
 
 p {
@@ -84,7 +84,7 @@ img {
     text-align: center;
     top: 50%;
     left: 50%;
-    padding-top: 300px;
+    padding-top: 50vh;
 }
 
 .banner-box {
@@ -97,7 +97,7 @@ img {
     height: 50%;
     background: lightgrey;
     opacity: .9;
-    animation: fadein 2.5s;
+    animation: fadein 1.5s;
 }
 
 @keyframes fadein {
@@ -331,14 +331,17 @@ img {
 
 .modal-body-left > p, .modal-body-right > p { /*for description in modals*/
     text-align: left;
-    padding: .6em 0;
+    padding: .4em 0;
     color: #545454;
     line-height: 150%;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .modal-body-left > h3, .modal-body-right > h3 { /*for titles in modals*/
     text-align: left;
     font-weight: 600;
+    font-size: 2em;
 }
 
 .modal-body-right > h4 { /*for subtitles in modal*/
@@ -375,7 +378,6 @@ img {
     background: #B86262;
 }
 
-/* Add Animation */
 @-webkit-keyframes animatetop {
     0% {
         transform: translateY(-150px);
