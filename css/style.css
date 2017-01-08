@@ -243,8 +243,9 @@ img {
     transition: all .5s ease;
     background: linear-gradient(to right, #e9e9e9 50%, #d1d1d1 50%);
     background-position: right top;
-    background-size: 201% 100%;
+    background-size: 200% 100%;
     padding: 2px;
+    font-weight: bold;
 }
 
 .project-description a:hover {
