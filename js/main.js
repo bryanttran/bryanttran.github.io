@@ -17,11 +17,18 @@ overlay[1].onclick = function() {
     modal[0].style.display = "flex";
     document.body.style.overflow = "hidden";
 }
+overlay[2].onclick = function() {
+    modal[1].style.display = "block";
+    document.body.style.overflow = "hidden";
+}
 
 // When the user clicks on <span> (x), close the modal
 span[0].onclick = function() {
     $("#myModal").fadeOut(700);
-    //modal[0].style.display = "none";
+    document.body.style.overflow = "visible";
+}
+span[1].onclick = function() {
+    $("#myModal2").fadeOut(700);
     document.body.style.overflow = "visible";
 }
 
@@ -29,26 +36,11 @@ span[0].onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal[0] ) {
         $("#myModal").fadeOut(700);
-        //modal[0].style.display = "none";
         document.body.style.overflow = "visible";
     } else if (event.target == modal[1]) {
         $("#myModal2").fadeOut(700);
-        //modal[1].style.display = "none";
         document.body.style.overflow = "visible";
     }
-}
-
-// When the user clicks the button, open the modal 
-overlay[2].onclick = function() {
-    modal[1].style.display = "block";
-    document.body.style.overflow = "hidden";
-}
-
-// When the user clicks on <span> (x), close the modal
-span[1].onclick = function() {
-    $("#myModal2").fadeOut(700);
-    //modal[1].style.display = "none";
-    document.body.style.overflow = "visible";
 }
 
 $(document).keyup(function(event) { 
@@ -58,18 +50,6 @@ $(document).keyup(function(event) {
         document.body.style.overflow = "visible";
     } 
 });
-
-function animationClick(element, animation){
-    element = $(element);
-    element.click(
-        function() {
-            element.addClass('animated ' + animation);        
-            //wait for animation to finish before removing classes
-            window.setTimeout( function(){
-                element.removeClass('animated ' + animation);
-            }, 2000);         
-        });
-}
 
 $("#myModal").on("show", function () {
     $("body").css('overflow', 'hidden');
@@ -87,13 +67,10 @@ $(window).on('scroll', function () {
     var height = bannerbox.outerHeight();
     offset = offset + height / 2;
     var calc = .9 - (scrollTop - offset + range) / range;
-  
     bannerbox.css({ 'opacity': calc });
-  
     if ( calc > '.9' ) {
       bannerbox.css({ 'opacity': .9 });
     } else if ( calc < '0' ) {
       bannerbox.css({ 'opacity': 0 });
     }
-  
 });

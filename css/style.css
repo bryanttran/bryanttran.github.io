@@ -79,6 +79,9 @@ img {
 }
 
 .banner-inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -98,6 +101,11 @@ img {
     background: lightgrey;
     opacity: .9;
     animation: fadein 1.5s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .9; }
 }
 
 @keyframes fadein {
@@ -186,7 +194,7 @@ img {
 .image {
     display: block;
     margin: 0 auto;
-    max-width: 80%;
+    width: 80%;
     height: auto;
     width: auto/9; /* edge case for ie8*/
     position: relative;
@@ -450,20 +458,17 @@ img {
     -ms-order: 1;
     order: 1;
     position: relative;   
-    float: left;
-    width: 600px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 30px black;
 }
 
 .experience-1-description, .experience-2-description {
-    float: top;
     width: 90%;
     position: relative;
     text-align: left;
     margin-left: 5%;
-    vertical-align: top;
 }
 
 .valign {
@@ -532,11 +537,84 @@ img {
     height: 200px;
     position: relative;
     margin: 0 auto;
-    transition: filter 1s ;
+    transition: filter 1s;
+    transition: -webkit-filter 1s;
     transition: transform .7s ease;
+    transition: -webkit-transform .7s ease;
+    transition: -ms-transform .7s ease;
 }
 
 .contact-image img:hover {
     filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+/*Media Queries*/
+/*********************************************/
+@media (max-width: 712px) {
+    .about {
+        font-size: 1.3em;
+    }
+    
+    .banner-box h1 {
+        font-size: 2em;
+    }
+    
+    .banner-box h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 850px) {
+    .overlay h2 {
+        font-size: 1.6em;
+    }
+    
+    .overlay h3, .overlay h4 {
+        font-size: 1.2em;   
+    }
+    
+    .experience-1-container, .experience-2-container {
+        display: block;
+    }
+    
+    .experience-1-description, .experience-2-description {
+        width: 100%;
+        position: relative;
+        padding-top: 1em;
+    }
+    
+    .modal-body-left, .modal-body-right {
+        width: 100%;
+        float: none;
+    }
+    
+    .modal-body-left > p, .modal-body-right > p, .modal-body-right > h4, 
+    .modal-body-left > h3, .modal-body-right > h3 {
+        text-align: center;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 555px) {
+    .image {
+        width: 100%;
+    }
+    .overlay > h2 {
+        font-size: 1.5em;
+    }
+    
+    .overlay > h3, .overlay > h4 {
+        font-size: 1em;
+    }
+    
+    #navbar a {
+        font-size: .7em;
+    }
 }
