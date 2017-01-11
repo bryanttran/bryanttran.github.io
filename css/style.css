@@ -5,7 +5,7 @@ body {
     margin: 0;
     background-size: 100%;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: Raleway, sans-serif !important;
     background: no-repeat fixed url(/Pictures/background.jpeg);
     background-size: cover;
     background-position: 52% 40%;
@@ -541,7 +541,6 @@ img {
     transition: -webkit-filter 1s;
     transition: transform .7s ease;
     transition: -webkit-transform .7s ease;
-    transition: -ms-transform .7s ease;
 }
 
 .contact-image img:hover {
@@ -549,7 +548,6 @@ img {
     -webkit-filter: brightness(0) invert(1);
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
 }
 
 /*Media Queries*/
